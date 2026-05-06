@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from '../api/axios';
 import { AuthContext } from '../context/AuthContext';
 import { ShieldAlert, LogIn } from 'lucide-react';
@@ -82,6 +82,12 @@ const Login = () => {
           <a href="/admin" className="text-sm text-muted hover:text-secondary transition-colors">
             Login sebagai Admin
           </a>
+          <div style={{ marginTop: '0.75rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            Belum punya akun?{' '}
+            <Link to="/register" style={{ color: 'var(--primary)', fontWeight: 600 }}>
+              Daftar sekarang
+            </Link>
+          </div>
         </div>
       </div>
     </div>
